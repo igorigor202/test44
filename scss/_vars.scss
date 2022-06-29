@@ -1,0 +1,27 @@
+$accent: #f7600e;
+$default: #3b434c;
+$white: #ffffff;
+
+$big-r: 1380;
+$tab-r: 1024;
+$mtab-r: 992;
+$stab-r: 768;
+$bmob-r: 576;
+$smob-r: 420;
+$vsmob-r: 360;
+
+
+@media (min-width: 1025px){
+  
+}
+@mixin adpt($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@include adpt ($bmob-r){
+  
+}
+
+

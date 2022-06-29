@@ -1,0 +1,124 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $default;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: $white;
+}
+
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+._accent {
+  color: $accent;
+}
+
+.logo {
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 1px solid $accent;
+  color: $white;
+  background-color: $accent;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $accent;
+  }
+
+  &_2 {
+    border-color: rgba($white, 0.2);
+    background-color: transparent;
+  }
+}
+
+.input {
+  font-size: 16px;
+  color: $default;
+  background-color: $white;
+  border-radius: 10px;
+  border: none;
+  padding: 13px 25px;
+  line-height: 1;
+  outline-color: $accent;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  @include adpt ($stab-r){
+    font-size: 32px;
+  }
+  @include adpt ($bmob-r){
+    font-size: 30px;
+  }
+}
+
+.subtitle {
+  max-width: 475px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 90px;
+  @include adpt ($stab-r){
+    margin-bottom: 50px;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+._fixed {
+  overflow: hidden;
+}
